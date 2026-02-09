@@ -6,8 +6,8 @@
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
 
 ## Imagenes
-![Index](https://ibb.co/qVzbRnx)
-![Result](https://ibb.co/674W2k8L)
+![Index](https://i.ibb.co/sdFVhZCz/image.png)
+![Result](https://i.ibb.co/p5gC3Pn/imagen-2026-02-08-213424245.png)
 
 ## Descripción del Proyecto
 
