@@ -1,43 +1,138 @@
 <!DOCTYPE html>
-<html xmlns:th = "http://www.thymeleaf.org" lang="en">
-    <head>
-        <title>PokeApi Resultado</title>
-        <style>
-            body {
-                background: linear-gradient(135deg, #F08F00, #FF6347);
-                height: 100vh;
-                margin: 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                font-family: Arial, sans-serif;
-            }
-            .pokemon-data {
-                background-color: rgba(255, 255, 255, 0.8);
-                padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                text-align: left;
-                font-size: 1.2rem;
-            }
-            p {
-                margin: 10px 0;
-            }
-            strong {
-                color: #242EF0;
-            }
-            span {
-                color: #333;
-            }
-        </style>
-    </head>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado | PokeApi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #4786FF;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
 
-    <body>
-        <p><strong>ID:</strong> <span th:text="${id}"></span></p>
-        <p><strong>Nombre:</strong> <span th:text="${name}"></span></p>
-        <p><strong>Altura:</strong> <span th:text="${height}"></span> decímetros</p>
-        <p><strong>Peso:</strong> <span th:text="${weight}"></span> hectogramos</p>
-    </body>
+        /* Tarjeta principal */
+        .pokemon-card {
+            background: rgb(255, 255, 255);
+            width: 350px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
 
+        /* Cabecera de la tarjeta*/
+        .card-header {
+            background: linear-gradient(135deg, #F08F00, #FF6347);
+            padding: 40px 0;
+            color: white;
+        }
+
+        /* Círculo de la imagen */
+        .img-container {
+            width: 150px;
+            height: 150px;
+            background: white;
+            border-radius: 50%;
+            margin: -75px auto 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .img-container img {
+            width: 120px;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+        }
+
+        .pokemon-name {
+            text-transform: capitalize;
+            font-size: 1.8rem;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .pokemon-id {
+            background: #eee;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Rejilla de estadísticas */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 20px;
+            gap: 15px;
+            border-top: 1px solid #f0f0f0;
+            margin-top: 20px;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #242EF0;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: #999;
+            text-transform: uppercase;
+        }
+
+        .btn-back {
+            display: inline-block;
+            margin: 20px 0 30px;
+            text-decoration: none;
+            color: #FF6347;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .btn-back:hover { opacity: 0.7; }
+    </style>
+</head>
+<body>
+
+    <div class="pokemon-card">
+        <div class="card-header">
+            </div>
+
+        <div class="img-container">
+            <img th:src="${sprites}" alt="Imagen del Pokémon" />
+        </div>
+
+        <h1 class="pokemon-name" th:text="${name}">Nombre</h1>
+        <span class="pokemon-id">Nº <span th:text="${id}">000</span></span>
+
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-value"><span th:text="${height}"></span> dm</span>
+                <span class="stat-label">Altura</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value"><span th:text="${weight}"></span> hg</span>
+                <span class="stat-label">Peso</span>
+            </div>
+        </div>
+
+        <a href="/" class="btn-back">← Volver a buscar</a>
+    </div>
+
+</body>
 </html>

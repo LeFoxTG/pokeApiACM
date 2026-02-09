@@ -5,6 +5,10 @@
 ![Thymeleaf](https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf&logoColor=white)
 ![Maven](https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white)
 
+## Imagenes
+![Index](https://ibb.co/qVzbRnx)
+![Result](https://ibb.co/674W2k8L)
+
 ## Descripción del Proyecto
 
 **PokeApiACM** es una aplicación web desarrollada con **Spring Boot MVC** que actúa como cliente para consumir la [PokéAPI](https://pokeapi.co/).
@@ -45,4 +49,4 @@ graph LR
     View2 -->|HTML Renderizado| User
 ```
 
-Hecho con ❤️ por Angelo "FoxTG" Ibañez
+Hecho con ❤️ por FoxTG

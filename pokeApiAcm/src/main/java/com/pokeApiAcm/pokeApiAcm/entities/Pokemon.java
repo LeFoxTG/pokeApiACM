@@ -7,10 +7,10 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
 public class Pokemon {
     private int id;
     private String name;
     private int height;
     private int weight;
+    private String sprites;
 }

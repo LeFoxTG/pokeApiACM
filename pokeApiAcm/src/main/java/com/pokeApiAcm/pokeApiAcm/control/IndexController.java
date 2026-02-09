@@ -35,6 +35,7 @@ public class IndexController {
         model.addAttribute("id", pokemonDTO.id());
         model.addAttribute("height", pokemonDTO.height());
         model.addAttribute("weight", pokemonDTO.weight());
+        model.addAttribute("sprites", pokemonDTO.sprites().other().dreamWorld().front_default());
         model.addAttribute("name", name);
         return "pokeView";
     }

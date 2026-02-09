@@ -30,7 +30,7 @@ public class PokeService {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(str)).build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         PokemonDTO pokemonDTO = gson.fromJson(response.body(), PokemonDTO.class);
-        gson.toJson(pokemonDTO, PokemonDTO.class, new JsonWriter(new FileWriter("src/main/resources/pokemon.json")));
+        gson.toJson(pokemonDTO, PokemonDTO.class, new JsonWriter(new FileWriter("pokeApiAcm\\src\\main\\resources\\pokemon.json")));
         System.out.println(pokemonDTO.toString());
         return pokemonDTO;
     };
