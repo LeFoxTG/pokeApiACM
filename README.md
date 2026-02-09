@@ -45,4 +45,4 @@ graph LR
     View2 -->|HTML Renderizado| User
 ```
 
-Hecho con ❤️ por Angelo "FoxTG" Ibañez
+Hecho con ❤️ por FoxTG
